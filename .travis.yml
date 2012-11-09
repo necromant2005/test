@@ -13,7 +13,7 @@ before_script:
     - sudo apt-get install -qq memcached memcachedb
     - printf "\n"| sudo pecl install memcache
     # gearman
-    - sudo apt-get install gearman-server libgearman6
+    - sudo apt-get install gearman-server libgearman-dev
     - printf "\n"| sudo pecl install gearman
 
 #notifications:
