@@ -15,6 +15,7 @@ before_script:
     - printf "\n"| sudo pecl install memcache
     - echo "extension=memcache.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
 
+
 #notifications:
 #  email:
 #    - necromant2005@gmail.com
