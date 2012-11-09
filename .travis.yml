@@ -9,8 +9,6 @@ before_script:
     - sudo apt-get install -qq memcached memcachedb mongodb-10gen
     - printf "\n"| sudo pecl install memcache
     - echo "extension=memcache.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
-    - printf "\n"| pecl install gearman
-    - echo "extension=gearman.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
 
 notifications:
   email:
