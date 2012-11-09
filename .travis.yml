@@ -6,7 +6,7 @@ before_script:
     - echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen'> /tmp/10gen.list
     - sudo cp /tmp/10gen.list /etc/apt/sources.list.d/10gen.list
     - sudo apt-get update -qq
-    - sudo apt-get install -qq memcache memcachedb mongodb-10gen
+    - sudo apt-get install -qq memcached memcachedb mongodb-10gen
     - sudo pecl install memcache
     - echo "extension=memcache.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
     - pecl install mongo
