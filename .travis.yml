@@ -2,11 +2,12 @@ language: php
 php:
     - hhvm
 before_script:
+ - echo $TRAVIS_PHP_VERSION
  - |
     if [[ $TRAVIS_PHP_VERSION = "hhv"* ]]; then
       echo "hhvm.enable_hip_hop_syntax = true" >> /etc/hhvm/php.ini
     fi
 
 script:
-    - php --modules
+    - php --version
 
