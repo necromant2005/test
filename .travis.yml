@@ -1,21 +1,6 @@
 language: php
 php:
-    - 5.4
-before_script:
-    # mongo
-    - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
-    - echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen'> /tmp/10gen.list
-    - sudo cp /tmp/10gen.list /etc/apt/sources.list.d/10gen.list
-    - sudo apt-get update -qq
-    - sudo apt-get install -qq mongodb-10gen
-    - printf "\n"| pecl install mongo
-    # memcache
-    - sudo apt-get install -qq memcached memcachedb
-    - printf "\n"| sudo pecl install memcache
-    # gearman
-    - sudo apt-get install gearman-server libgearman-dev
-    - printf "\n"| sudo pecl install gearman
+    - hhvm
+after_script:
+    - php -i
 
-#notifications:
-#  email:
-#    - necromant2005@gmail.com
